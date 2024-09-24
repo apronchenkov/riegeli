@@ -146,7 +146,7 @@ class DefaultChunkWriterBase : public ChunkWriter {
   };
 
   // Returns the Riegeli/records file being written to. Unchanged by `Close()`.
-  virtual Writer* DestWriter() const ABSL_ATTRIBUTE_LIFETIME_BOUND = 0;
+  virtual Writer* DestWriter() const ABSL_ATTRIBUTE_LIFETIME_BOUND = 0 {}
 
   bool WriteChunk(const Chunk& chunk) override;
   bool PadToBlockBoundary() override;
